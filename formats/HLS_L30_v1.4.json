@@ -1,0 +1,58 @@
+{
+  "description" : "Image collection format for the Harmonized Landsat Sentinel-2 (HLS-L30) dataset (v1.4)",
+  "tags" : ["Landsat", "Sentinel", "Surface Reflectance"],
+  "pattern" : ".+v1\\.4\\.hdf.*",
+  "images" : {
+    "pattern" : ".*(HLS\\.L30.+)\\.v1\\.4\\.hdf.*"
+  },
+  "datetime" : {
+    "pattern" : ".*HLS\\.L30\\..{6}\\.([0-9]{7})\\.v1\\.4\\.hdf.*", 
+    "format" : "%Y%j"
+  },
+  "bands" : {
+    "Coastal_Aerosol" : {
+      "nodata" : -1000,
+      "pattern" : ".*band01$"
+    },
+    "Blue" : {
+      "nodata" : -1000,
+      "pattern" : ".*band02$"
+    },
+    "Green" : {
+      "nodata" : -1000,
+      "pattern" : ".*band03$"
+    },
+    "Red" : {
+      "nodata" : -1000,
+      "pattern" : ".*band04$"
+    },
+    "NIR" : {
+      "nodata" : -1000,
+      "pattern" : ".*band05$"
+    },
+    "SWIR1" : {
+      "nodata" : -1000,
+      "pattern" : ".*band06$"
+    },
+    "SWIR2" : {
+      "nodata" : -1000,
+      "pattern" : ".*band07$"
+    },
+    "Cirrus" : {
+      "nodata" : -1000,
+      "pattern" : ".*band09$"
+    },
+    "TIRS1" : {
+      "nodata" : -10000,
+      "pattern" : ".*band10$"
+    },
+    "TIRS2" : {
+      "nodata" : -10000,
+      "pattern" : ".*band11$"
+    },
+    "QA" : {
+      "pattern" : ".*QA$"
+    }
+  }
+}
+  
