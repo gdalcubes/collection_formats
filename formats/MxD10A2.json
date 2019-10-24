@@ -2,6 +2,7 @@
   "description" : "Collection format for selected bands from the MODIS MxD10A2 (Aqua and Terra) v006 Snow Cover product",
   "tags" : ["MODIS", "Snow Cover"],
   "pattern" : ".*\\.hdf.*",
+  "subdatasets" : true,
   "images" : {
     "pattern" : "HDF4_EOS:EOS_GRID:\"(.+)\\.hdf.*"
   },
@@ -11,11 +12,11 @@
   },
   "bands" : {
     "Eight_Day_Snow_Cover" : {
-      "pattern" : ".+Eight_Day_Snow_Cover$",
+      "pattern" : ".+Eight_Day_Snow_Cover.*",
       "nodata" : 0
     },
     "Maximum_Snow_Extent" : {
-      "pattern" : ".+Maximum_Snow_Extent",
+      "pattern" : ".+Maximum_Snow_Extent.*",
       "nodata" : 255
     }
   }
