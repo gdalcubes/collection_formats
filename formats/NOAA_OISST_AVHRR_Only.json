@@ -1,0 +1,28 @@
+{
+  "description" : "Collection format for Optimum Interpolation Sea Surface Temperature (OISST) AVHRR-Only data",
+  "tags" : ["AVHRR", "SST", "OISST", "NOAA"],
+  "subdatasets" : true,
+  "srs" : "EPSG:4326",
+  "pattern" : ".*\\.nc.*",
+  "images" : {
+    "pattern" : ".*NETCDF:\"(.+)\\.nc.*"
+  },
+  "datetime" : {
+    "pattern" : ".*avhrr-only-v2\\.([0-9]{8}).*",
+    "format" : "%Y%m%d"
+  },
+  "bands" : {
+    "sst" : {
+      "pattern" : ".+sst.*"
+    },
+    "anom" : {
+      "pattern" : ".+anom.*"
+    },
+    "err" : {
+      "pattern" : ".+err.*"
+    },
+    "ice" : {
+      "pattern" : ".+ice.*"
+    }
+  }
+}
