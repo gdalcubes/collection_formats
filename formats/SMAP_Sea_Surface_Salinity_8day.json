@@ -1,5 +1,5 @@
 {
-  "description" : "Collection format for Remote Sensing Systems SMAP Level 3 Sea Surface Salinity Standard Mapped Image 8day running",
+  "description" : "Collection format for Remote Sensing Systems SMAP Sea Surface Height L4 product and derived variables Level 3 Sea Surface Salinity Standard Mapped Image 8day running",
   "tags" : ["SURFACE SALINITY", "SALINITY", "SMAP", "NASA", "RSS"],
   "subdatasets" : true,
   "srs" : "EPSG:4326",
