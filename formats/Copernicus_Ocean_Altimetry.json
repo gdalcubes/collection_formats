@@ -1,0 +1,37 @@
+{
+  "description" : "Collection format for Delayed Time merged all satellites Global Ocean Gridded SSALTO/DUACS",
+  "tags" : ["Copernicus", "SSH", "Sea surface height", "altimetry", "Geostrophic velocity", "Sea level anomaly"],
+  "subdatasets" : true,
+  "srs" : "EPSG:4326",
+  "pattern" : ".*\\.nc.*",
+  "images" : {
+    "pattern" : ".*NETCDF:\"(.+)\\.nc.*"
+  },
+  "datetime" : {
+    "pattern" : ".*dt_global_allsat_phy_l4.*([0-9]{8}).*",
+    "format" : "%Y%m%d"
+  },
+  "bands" : {
+    "ugosa" : {
+      "pattern" : ".+ugosa.*"
+    },
+    "adt" : {
+      "pattern" : ".+adt.*"
+    },
+    "ugos" : {
+      "pattern" : ".+ugos.*"
+    },
+    "sla" : {
+      "pattern" : ".+sla.*"
+    },
+    "vgos" : {
+      "pattern" : ".+vgos.*"
+    },
+    "vgosa" : {
+      "pattern" : ".+vgosa.*"
+    },
+    "err" : {
+      "pattern" : ".+err.*"
+    }
+  }
+}

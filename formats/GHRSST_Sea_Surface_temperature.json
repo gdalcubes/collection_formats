@@ -1,0 +1,28 @@
+{
+  "description" : "Collection format for GHRSST a merged, multi-sensor L4 Foundation SST analysis product from JPL.",
+  "tags" : ["oceans", "temperature", "SST", "JPL", "GHRSST"],
+  "subdatasets" : true,
+  "srs" : "EPSG:4326",
+  "pattern" : ".*\\.nc.*",
+  "images" : {
+    "pattern" : ".*NETCDF:\"(.+)\\.nc.*"
+  },
+  "datetime" : {
+    "pattern" : ".*([0-9]{8})090000-JPL-L4_GHRSST-SSTfnd-MUR-GLOB.*",
+    "format" : "%Y%m%d"
+  },
+  "bands" : {
+      "analysed_sst" : {
+      "pattern" : ".+analysed_sst.*"
+    },
+    "analysis_error" : {
+      "pattern" : ".+analysis_error.*"
+    },
+    "mask" : {
+      "pattern" : ".+mask.*"
+    },
+    "sea_ice_fraction" : {
+      "pattern" : ".+sea_ice_fraction.*"
+    }
+  }
+}

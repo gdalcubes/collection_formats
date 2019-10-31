@@ -1,0 +1,34 @@
+{
+  "description" : "Collection format for Remote Sensing Systems SMAP Sea Surface Height L4 product and derived variables Level 3 Sea Surface Salinity Standard Mapped Image 8day running",
+  "tags" : ["SURFACE SALINITY", "SALINITY", "SMAP", "NASA", "RSS"],
+  "subdatasets" : true,
+  "srs" : "EPSG:4326",
+  "pattern" : ".*\\.nc.*",
+  "images" : {
+    "pattern" : ".*NETCDF:\"(.+)\\.nc.*"
+  },
+  "datetime" : {
+    "pattern" : ".*RSS_smap_SSS_L3_8day_running_40km_([0-9]{4}_[0-9]{3}).*",
+    "format" : "%Y_%j"
+  },
+  "bands" : {
+      "nobs" : {
+      "pattern" : ".+nobs.*"
+    },
+    "sss_smap" : {
+      "pattern" : ".+sss_smap.*"
+    },
+    "sss_ref" : {
+      "pattern" : ".+sss_ref.*"
+    },
+    "gland" : {
+      "pattern" : ".+gland.*"
+    },
+    "gice" : {
+      "pattern" : ".+gice.*"
+    },
+    "surtep" : {
+      "pattern" : ".+surtep.*"
+    }
+  }
+}
