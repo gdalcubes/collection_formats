@@ -1,0 +1,23 @@
+{
+  "description" : "Collection format for climate model output pr_day_HadGEM2-ES_historical_r1i1p1",
+  "tags" : ["CMIP5", "Precipitation", "Climate", "CMIP5"],
+  "srs" : "EPSG:4326",
+  "pattern" : ".*\\.nc4.*",
+  "images" : {
+    "pattern" : ".*(pr_day_HadGEM2-ES_historical_r1i1p1_EWEMBI_.*).*\\.nc4"
+  },
+  "datetime" : {
+    "pattern" : ".*pr_day_HadGEM2-ES_historical_r1i1p1_EWEMBI_([0-9]{8}).*",
+    "format" : "%Y%m%d",
+    "bands" : {
+        "dt" : "P1D"
+    }
+  },
+  "bands" : {
+      "precipitation_flux" : {
+        "pattern" : ".*pr_day_HadGEM2-ES_historical_r1i1p1_EWEMBI_.*",
+        "nodata" : 1e+20,
+        "unit" : "kg m-2 s-1"
+    }
+  }
+}
