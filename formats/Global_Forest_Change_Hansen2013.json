@@ -1,0 +1,28 @@
+{
+  "description" : "Collection format for Global Forest Change (Hansen et al., 2013)",
+  "references" : "https://earthenginepartners.appspot.com/science-2013-global-forest/download_v1.6.html",
+  "tags" : ["Global Forest Change", "Forest loss", "Forest gain", "Tree cover", "Landsat"],
+  "pattern" : ".+\\.tif",
+  "images" : {
+    "pattern" : ".*(Hansen_GFC-.{4}-.{4}_+[A-Za-z0-9_]+_.{3}_.{4})\\.tif"
+  },
+  "datetime" : {
+    "pattern" : ".*Hansen_GFC-(.{4})-.*\\.tif",
+    "format" : "%Y"
+  },
+  "bands": {
+    "treecover2000" : {
+      "pattern" : ".+treecover2000+.*\\.tif"
+    },
+    "lossyear" : {
+      "pattern" : ".+lossyear+.*\\.tif"
+    },
+    "gain" : {
+      "pattern" : ".+gain+.*\\.tif"
+    },
+    "datamask" : {
+      "pattern" : ".+datamask+.*\\.tif",
+      "nodata" : 0
+    }
+  }
+}
